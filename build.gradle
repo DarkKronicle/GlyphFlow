@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.6.1"
+}
+
+group 'io.github.darkkronicle'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.jetbrains:annotations:23.1.0'
+    implementation 'com.github.jaredrummler:sfntly:469416da48'
+    implementation 'org.locationtech.jts:jts-core:1.19.0'
+}
+
+test {
+    useJUnitPlatform()
+}
